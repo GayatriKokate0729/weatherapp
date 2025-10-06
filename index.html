@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+            <p>Get the current weather and 5-day forecast for any city</p>
+        </header>
+
+        <main class="app-main">
+            <div class="search-container">
+                <form id="searchForm" class="search-form">
+                    <div class="search-bar">
+                        <input 
+                            type="text" 
+                            id="cityInput" 
+                            placeholder="Enter city name..."
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+
+            <div class="weather-container">
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Loading weather data...</p>
+                </div>
+
+                <div class="weather-display" id="weatherDisplay"></div>
+                <div class="forecast-container" id="forecastContainer"></div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Powered by OpenWeatherMap API</p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
